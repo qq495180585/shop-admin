@@ -2,13 +2,17 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import login from '@/components/login.vue'
 import home from '@/components/home.vue'
+import users from '@/components/users.vue'
+import roles from '@/components/roles.vue'
+import rights from '@/components/rights.vue'
 Vue.use(Router)
 
 const router = new Router({
   routes: [
+
     {
       path: '/',
-      redirect: '/login'
+      redirect: '/home'
     },
     {
       path: '/login',
@@ -16,8 +20,24 @@ const router = new Router({
     },
     {
       path: '/home',
-      component: home
+      component: home,
+      children: [
+
+        {
+          path: '/users',
+          component: users
+        },
+        {
+          path: '/roles',
+          component: roles
+        },
+        {
+          path: '/rights',
+          component: rights
+        }
+      ]
     }
+
   ]
 })
 router.beforeEach((to, from, next) => {

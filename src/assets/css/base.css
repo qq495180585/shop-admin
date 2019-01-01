@@ -1,25 +1,36 @@
-*{
+* {
   margin: 0;
   padding: 0;
   list-style: none;
   box-sizing: border-box;
 }
-html,body{
+
+html,
+body {
   height: 100%;
 }
-#app{
+
+#app {
   height: 100%;
 }
-.fr{
+
+.fr {
   float: right;
 }
-.fl{
+
+.fl {
   float: left;
 }
-.clearfix::after{
-  display:block;
-  clear:both;
-  content:"";
-  visibility:hidden;
-  height:0;
+
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0;
+}
+
+.el-breadcrumb {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
